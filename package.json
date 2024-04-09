@@ -1,11 +1,11 @@
 {
-    "name": "luogu-card",
+    "name": "luogu-excard",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {},
     "keywords": [],
-    "author": "cyrxdzj",
+    "author": "Sin Watt",
     "license": "LGPL",
     "dependencies": {
         "anafanafo": "^1.0.0",
