@@ -31,7 +31,7 @@ class ANum {
     }
 }
 
-const reNumSVG = (stats, options) => {
+const reNumSVG = (stats) => {
     const {
         passed,
         hideInfo
