@@ -258,6 +258,7 @@ const renderAboutText = (userType,followerCount,followingCount,ranking,slogan,da
 module.exports = { 
     NAMECOLOR,
     ANum,
+    reNumSVG,
     Card,
     renderError,
     renderCCFBadge,
