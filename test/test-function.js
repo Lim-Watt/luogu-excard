@@ -20,5 +20,5 @@ module.exports = async (req, res) => {
     }
 
     const stats = await fetchStats(id);
-    return res.send(renNumSVG(stats));
+    //return res.send(renNumSVG(stats));
 };
