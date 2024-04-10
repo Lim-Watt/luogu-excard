@@ -2,12 +2,11 @@ const { fetchStats } = require("../src/practice-card.js");
 const { renderError, reNumSVG} = require("../src/common.js");
 
 module.exports = async (req, res) => {
-    
-	const { 
+    const { 
         id, 
         disable_cache
     } = req.query;
-
+	/*
     res.setHeader("Content-Type", "image/svg+xml");
     if(!disable_cache){
         res.setHeader("Cache-Control", "public, max-age=43200"); // 43200s（12h） cache
@@ -19,8 +18,8 @@ module.exports = async (req, res) => {
     if(!validId.test(id)) {
         return res.send(renderError(`"${id}"不是一个合法uid`, {darkMode: dark_mode}));
     }
-
     const stats = await fetchStats(id);
+*/
     return res.send(`
             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="50" viewBox="0 0 80 50" fill="none">
 	<rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#E4E2E2" width="99%" fill="#fffefe" stroke-opacity="1"/>
