@@ -26,5 +26,5 @@ module.exports = async (req, res) => {
         <text x="0" y="0" fill="#e74c3c" font-weight="bold" textLength="60" font-size="30">210</text>
 	</g>
 </svg>`);*/
-    return res.send(renNumSVG(stats));
+    return res.send(reNumSVG(stats));
 };
