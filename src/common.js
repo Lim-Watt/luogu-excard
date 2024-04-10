@@ -14,7 +14,7 @@ class ANum {
     consructor({
         number = 0,
         cf = "#e74c3c",
-        cb = "#fffefe"
+        cb = "#fffefe",
     }) {
         this.number = number;
         this.cf = cf;
