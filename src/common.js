@@ -21,20 +21,20 @@ class ANum {
         this.cb = cb;
     }
     render() {
-        // return `
-        //     <svg xmlns="http://www.w3.org/2000/svg" width="80" height="50" viewBox="0 0 80 50" fill="none">
-        //     	<rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#E4E2E2" width="99%" fill=${this.cb} stroke-opacity="1"/>
-        //     	<g transform="translate(10, 35)" font-family="Verdana, Microsoft Yahei" text-rendering="geometricPrecision">
-        //             <text x="0" y="0" fill=${this.cf} font-weight="bold" textLength="60" font-size="30">${this.number}</text>
-        //     	</g>
-        //     </svg>`;
-    return `
+        return `
             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="50" viewBox="0 0 80 50" fill="none">
-	<rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#E4E2E2" width="99%" fill="#fffefe" stroke-opacity="1"/>
-	<g transform="translate(10, 35)" font-family="Verdana, Microsoft Yahei" text-rendering="geometricPrecision">
-        <text x="0" y="0" fill="#e74c3c" font-weight="bold" textLength="60" font-size="30">210</text>
-	</g>
-</svg>`;
+            	<rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#E4E2E2" width="99%" fill="${this.cb}" stroke-opacity="1"/>
+            	<g transform="translate(10, 35)" font-family="Verdana, Microsoft Yahei" text-rendering="geometricPrecision">
+                    <text x="0" y="0" fill="${this.cf}" font-weight="bold" textLength="60" font-size="30">${this.number}</text>
+            	</g>
+            </svg>`;
+//     return `
+//             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="50" viewBox="0 0 80 50" fill="none">
+// 	<rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#E4E2E2" width="99%" fill="#fffefe" stroke-opacity="1"/>
+// 	<g transform="translate(10, 35)" font-family="Verdana, Microsoft Yahei" text-rendering="geometricPrecision">
+//         <text x="0" y="0" fill="#e74c3c" font-weight="bold" textLength="60" font-size="30">210</text>
+// 	</g>
+// </svg>`;
     }
 }
 
