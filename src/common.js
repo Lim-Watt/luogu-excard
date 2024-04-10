@@ -47,10 +47,12 @@ const reNumSVG = (stats) => {
     if(hideInfo) {
         return renderError("用户开启了“完全隐私保护”，获取数据失败", options={width:360});
     }
-    return renderError(String(passed[7] - passed[6] + 1), options={width:360});
-    // return new ANum({
-    //     number: passed[7] - passed[6] + 1,
-    // }).render();
+    // return renderError(String(passed[7] - passed[6] + 1), options={width:360});
+    return new ANum({
+        number: passed[7] - passed[6] + 1,
+        cf: "#e74c3c",
+        cb: "#fffefe",
+    }).render();
 }
 
 class Card {
