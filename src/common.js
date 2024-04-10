@@ -15,7 +15,11 @@ class ANum {
         number = 0,
         cf = "#e74c3c",
         cb = "#fffefe"
-    })
+    }) {
+        this.number = number;
+        this.cf = cf;
+        this.cb = cb;
+    }
     render() {
         return `
             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="50" viewBox="0 0 80 50" fill="none">
