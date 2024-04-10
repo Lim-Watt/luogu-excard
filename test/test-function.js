@@ -21,12 +21,12 @@ module.exports = async (req, res) => {
     }
 
     const stats = await fetchStats(id);*/
-    return `
+    return res.send(`
             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="50" viewBox="0 0 80 50" fill="none">
 	<rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#E4E2E2" width="99%" fill="#fffefe" stroke-opacity="1"/>
 	<g transform="translate(10, 35)" font-family="Verdana, Microsoft Yahei" text-rendering="geometricPrecision">
         <text x="0" y="0" fill="#e74c3c" font-weight="bold" textLength="60" font-size="30">210</text>
 	</g>
-</svg>`;
+</svg>`);
     //return res.send(renNumSVG(stats));
 };
