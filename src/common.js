@@ -11,27 +11,25 @@ const NAMECOLOR = {
 }
 
 class ANum {
-    constructor(number) {
+    constructor(
+	    number,
+	    cf,
+	    cb
+    ) {
         this.number = number;
+	this.cf = cf;
+	this.cb = cb;
     }
     
     render() {
 	    
-    // return renderError(this.number, options={width:360});
-        // return `
-        //     <svg xmlns="http://www.w3.org/2000/svg" width="80" height="50" viewBox="0 0 80 50" fill="none">
-        //     	<rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#E4E2E2" width="99%" fill="${this.cb}" stroke-opacity="1"/>
-        //     	<g transform="translate(10, 35)" font-family="Verdana, Microsoft Yahei" text-rendering="geometricPrecision">
-        //             <text x="0" y="0" fill="${this.cf}" font-weight="bold" textLength="60" font-size="30">${this.number}</text>
-        //     	</g>
-        //     </svg>`;
-    return `
+        return `
             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="50" viewBox="0 0 80 50" fill="none">
-	<rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#E4E2E2" width="99%" fill="#fffefe" stroke-opacity="1"/>
-	<g transform="translate(10, 35)" font-family="Verdana, Microsoft Yahei" text-rendering="geometricPrecision">
-        <text x="0" y="0" fill="#e74c3c" font-weight="bold" textLength="60" font-size="30">${this.number}</text>
-	</g>
-</svg>`;
+            	<rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#E4E2E2" width="99%" fill="${this.cb}" stroke-opacity="1"/>
+            	<g transform="translate(10, 35)" font-family="Verdana, Microsoft Yahei" text-rendering="geometricPrecision">
+                    <text x="0" y="0" fill="${this.cf}" font-weight="bold" textLength="60" font-size="30">${this.number}</text>
+            	</g>
+            </svg>`;
     }
 }
 
@@ -44,7 +42,11 @@ const reNumSVG = (stats) => {
     if(hideInfo) {
         return renderError("用户开启了“完全隐私保护”，获取数据失败", options={width:360});
     }
-    return new ANum(passed[7] - passed[6] + 1).render();
+    return new ANum(
+	    passed[6] - passed[7] + 1,
+	    "#e74c3c",
+	    "#fffefe"
+    ).render();
 }
 
 class Card {
