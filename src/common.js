@@ -11,7 +11,7 @@ const NAMECOLOR = {
 }
 
 class ANum {
-    consructor(number) {
+    constructor(number) {
         this.number = number;
     }
     
