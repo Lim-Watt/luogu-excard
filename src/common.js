@@ -137,7 +137,7 @@ const renderError = (e, option) => {
         paddingX: 20,
         ...option,
     }).render();
-};
+}
 
 /**
  * 渲染 ccf badge
