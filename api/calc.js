@@ -44,7 +44,7 @@ module.exports = async (req, res) => {
 				const stats = await fetchStats(id);
                 if(stats.hideInfo)
 				{
-					return renderError("用户开启了“完全隐私保护”，获取数据失败", options={width:360});
+					return res.send(renderError("用户开启了“完全隐私保护”，获取数据失败", options={width:360}));
 				}
 				ma.set(id, stats.passed);
 			}
@@ -60,11 +60,11 @@ module.exports = async (req, res) => {
 			ans -= now;
 	}
 	
-	document.getElementById("demo").innerHTML = new ANum({
+	return res.send(new ANum({
 		number : ans,
 		co_fr : co_fr,
 		co_ba : co_ba,
 		co_br : co_br,
 		fo_si : fo_si,
-	}).render();
+	}).render());
 }
