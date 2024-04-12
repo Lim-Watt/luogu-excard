@@ -1,5 +1,5 @@
-const { fetchStats, renderSVG } = require("../src/practice-card.js");
-const { renderError } = require("../src/common.js")
+const { fetchStats, renderSVG } = require("/src/practice-card.js");
+const { renderError } = require("/src/common.js")
 
 module.exports = async (req, res) => {
     const { 
