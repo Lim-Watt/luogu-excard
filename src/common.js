@@ -32,7 +32,7 @@ class ANum {
 	render() {
 		let prefont = new FontFace(
 		    "Code",
-		    'url('../ttf/Code.ttf')'
+		    'url(../ttf/Code.ttf)'
 		  );
 		 
 		  prefont.load().then(function (loaded_face) {
