@@ -11,42 +11,67 @@ const NAMECOLOR = {
 }
 
 class ANum {
-    constructor(
-	    number,
-	    cf,
-	    cb
-    ) {
-        this.number = number;
-	this.cf = cf;
-	this.cb = cb;
-    }
-    
-    render() {
-	    
-        return `
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="40" viewBox="0 0 80 40" fill="none">
-            	<rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#E4E2E2" width="99%" fill="${this.cb}" stroke-opacity="1"/>
-            	<g transform="translate(10, 30)" font-family="Verdana, Microsoft Yahei" text-rendering="geometricPrecision">
-                    <text x="0" y="0" fill="${this.cf}" font-weight="bold" textLength="60" font-size="30">${this.number}</text>
-            	</g>
-            </svg>`;
-    }
-}
-
-const reNumSVG = (stats) => {
-    const {
-        passed,
-        hideInfo
-    } = stats;
-
-    if(hideInfo) {
-        return renderError("用户开启了“完全隐私保护”，获取数据失败", options={width:360});
-    }
-    return new ANum(
-	    passed[6] - passed[7] + 1,
-	    "#e74c3c",
-	    "#fffefe"
-    ).render();
+	constructor({
+		number = 0,
+		co_fr = "#000000",
+		co_ba = "#ffffff",
+		co_br = "#e4e2e2",
+		fo_si = 30,
+	}) {
+		this.number = number;
+		this.co_fr = co_fr;
+		this.co_ba = co_ba;
+		this.co_br = co_br;
+		this.fo_si = fo_si;
+	}
+	
+	render() {
+		
+		//let height = this.fo_si + 10;
+		let height = this.fo_si;
+		let width = height * 0.6;
+		
+		let takx = height * 0.2;
+		let taky = height * 0.8;
+		
+		let renum = "";
+		
+		let x = String(this.number);
+		
+		for (let c of x)
+		{
+			renum += `
+				<text transform="translate(${takx}, ${taky})">${c}</text>`
+			takx += width;
+		}
+		width = takx + height * 0.2;
+		
+		let head = `
+			<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none">`;
+		
+		let css = `
+			<style>
+				@font-face{
+					font-family: 'Code' ;
+					src: url('ttf/Courier Prime Code.ttf');
+				}
+				text {
+					font-family: Code, Verdana, Microsoft Yahei;
+					text-rendering: geometricPrecision;
+					font-weight: bold;
+					background: ${this.co_ba};
+					fill: ${this.co_fr};
+					font-size: ${this.fo_si};
+				}
+			</style>`;
+		
+		let rect = `
+			<rect rx="5%" height="99%" stroke="${this.co_br}" width="99%" fill="${this.co_ba}" stroke-opacity="1"/>`;
+		
+		let end = `
+			</svg>`;
+		return head + css + rect + renum + end;
+	}
 }
 
 class Card {
@@ -261,7 +286,6 @@ const renderAboutText = (userType,followerCount,followingCount,ranking,slogan,da
 module.exports = { 
     NAMECOLOR,
     ANum,
-    reNumSVG,
     Card,
     renderError,
     renderCCFBadge,
