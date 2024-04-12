@@ -57,7 +57,7 @@ class ANum {
 			<style>
 				@font-face{
 					font-family: 'Code' ;
-					src: url('/ttf/Code.ttf');
+					src: url('/api/ttf/Code.ttf');
 				}
 				text {
 					font-family: Code, Verdana, Microsoft Yahei;
