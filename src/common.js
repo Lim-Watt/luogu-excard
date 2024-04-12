@@ -57,7 +57,7 @@ class ANum {
 			<style>
 				@font-face{
 					font-family: 'Code' ;
-					src: url('ttf/Courier Prime Code.ttf');
+					src: url('../ttf/Courier Prime Code.ttf');
 				}
 				text {
 					font-family: Code, Verdana, Microsoft Yahei;
