@@ -9,5 +9,10 @@
     { "src": "/about", "dest": "/api/about.js" },
     { "src": "/calc", "dest": "/api/calc.js" },
     { "src": "/test-function", "dest": "/test/test-function.js" }
-  ]
+  ],
+  "functions": {
+     "api/**": {
+       "memory": 1024
+     }
+   }
 }
