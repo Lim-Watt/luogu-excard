@@ -10,6 +10,10 @@ const NAMECOLOR = {
     "Cheater": "#ad8b00"
 }
 
+const color16 = (str) => {
+	return '#' + str.replace('#', '');
+}
+
 class ANum {
 	constructor({
 		number = 0,
@@ -19,9 +23,9 @@ class ANum {
 		fo_si = 30,
 	}) {
 		this.number = number;
-		this.co_fr = co_fr;
-		this.co_ba = co_ba;
-		this.co_br = co_br;
+		this.co_fr = color16(co_fr);
+		this.co_ba = color16(co_ba);
+		this.co_br = color16(co_br);
 		this.fo_si = fo_si;
 	}
 	
