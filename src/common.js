@@ -30,20 +30,20 @@ class ANum {
 	}
 	
 	render() {
-		let prefont = new FontFace(
-		    "Code",
-		    'url(../ttf/Code.ttf)'
-		  );
+		// let prefont = new FontFace(
+		//     "Code",
+		//     'url(../ttf/Code.ttf)'
+		//   );
 		 
-		  prefont.load().then(function (loaded_face) {
+		//   prefont.load().then(function (loaded_face) {
 		 
-		    document.fonts.add(loaded_face);
+		//     document.fonts.add(loaded_face);
 		 
-		    console.log('字体加载成功', loaded_face, document.fonts)
+		//     console.log('字体加载成功', loaded_face, document.fonts)
 		 
-		  }).catch(function (error) {
-		    console.log('字体加载失败', error)
-		  })
+		//   }).catch(function (error) {
+		//     console.log('字体加载失败', error)
+		//   })
 		//let height = this.fo_si + 10;
 		let height = this.fo_si;
 		let width = height * 0.6;
