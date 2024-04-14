@@ -42,13 +42,13 @@ module.exports = async (req, res) => {
 			if (!ma.has(id))
 			{
 				const stats = await fetchStats(id);
-                if(stats.hideInfo)
+				if(stats.hideInfo)
 				{
 					return res.send(renderError("用户开启了“完全隐私保护”，获取数据失败", options={width:360}));
 				}
 				ma.set(id, stats.passed);
 			}
-			now = ma[id][di];
+			now = ma.get(id)[di];
 		}
 		else
 		{
