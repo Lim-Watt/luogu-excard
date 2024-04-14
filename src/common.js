@@ -30,20 +30,7 @@ class ANum {
 	}
 	
 	render() {
-		// let prefont = new FontFace(
-		//     "Code",
-		//     'url(../ttf/Code.ttf)'
-		//   );
-		 
-		//   prefont.load().then(function (loaded_face) {
-		 
-		//     document.fonts.add(loaded_face);
-		 
-		//     console.log('字体加载成功', loaded_face, document.fonts)
-		 
-		//   }).catch(function (error) {
-		//     console.log('字体加载失败', error)
-		//   })
+		
 		//let height = this.fo_si + 10;
 		let height = this.fo_si;
 		let width = height * 0.6;
@@ -68,6 +55,10 @@ class ANum {
 		
 		let css = `
 			<style>
+   				@font-face{
+					font-family: 'Code' ;
+					src: url('https://font-rho.vercel.app/fft/Code.ttf');
+				}
 				text {
 					font-family: Code, Verdana, Microsoft Yahei;
 					text-rendering: geometricPrecision;
