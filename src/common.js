@@ -45,7 +45,7 @@ class ANum {
 		for (let c of x)
 		{
 			renum += `
-				<text transform="translate(${takx}, ${taky})">${c}</text>`
+				<text transform="translate(${takx}, ${taky})" font-size="${this.fo_si}">${c}</text>`
 			takx += width;
 		}
 		width = takx + height * 0.2;
@@ -66,7 +66,6 @@ class ANum {
 					font-weight: bold;
 					background: ${this.co_ba};
 					fill: ${this.co_fr};
-					font-size: ${this.fo_si};
 				}
 			</style>`;
 		
