@@ -57,7 +57,7 @@ class ANum {
 			<style>
    				@font-face{
 					font-family: 'Code' ;
-					src: url('https://font-rho.vercel.app/fft/Code.ttf');
+					src: url('https://font-rho.vercel.app/ttf/Code.ttf');
 				}
 				text {
 					font-family: Code, Verdana, Microsoft Yahei;
