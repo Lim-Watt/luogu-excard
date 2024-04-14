@@ -55,12 +55,7 @@ class ANum {
 		
 		let css = `
 			<style>
-   				@font-face{
-					font-family: 'Code' ;
-					src: url('https://font-rho.vercel.app/ttf/Code.ttf');
-     					font-display: fallback;
-				}
-				text {
+   				text {
 					font-family: Code, Verdana, Microsoft Yahei;
 					text-rendering: geometricPrecision;
 					font-weight: bold;
