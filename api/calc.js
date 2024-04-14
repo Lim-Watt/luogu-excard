@@ -11,6 +11,8 @@ module.exports = async (req, res) => {
 		fo_si
 	}  = req.query;
 	
+	res.setHeader("Content-Type", "image/svg+xml");
+	
 	const validask = /^[1-9]\d*(_[0-7])?([+-][1-9]\d*(_[0-7])?)*$/;
 	
 	if(!validask.test(ask)) {
