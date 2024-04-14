@@ -56,7 +56,7 @@ class ANum {
 		let css = `
 			<style>
    				@font-face{
-					font-family: 'Code' ;
+					font-family: 'Code';
 					src: url('https://font-rho.vercel.app/ttf/Code.ttf');
      					font-display: swap;
 				}
@@ -122,11 +122,6 @@ class Card {
         return `
             <svg xmlns="http://www.w3.org/2000/svg" width="${cardSize.width}" height="${cardSize.height}" viewBox="0 0 ${cardSize.width} ${cardSize.height}" fill="none">
                 <style>
-			@font-face{
-					font-family: 'Code' ;
-					src: url('https://font-rho.vercel.app/ttf/Code.ttf');
-     					font-display: swap;
-				}
                     .text { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.darkMode?"#fffefe":"#333333"} }
                     .about-text { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.darkMode?"#fffefe":"#333333"} }
                     .about-text-grey { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #848484 }
@@ -250,7 +245,7 @@ const renderNameTitle = (name, color, ccfLevel, title, cardWidth, rightTop, tag)
     const tagSVG = tag?`<defs><filter x="-0.05" y="-0.05" width="1.1" height="1.1" id="tagFilter"><feFlood flood-color="${nameColor}"/><feComposite in="SourceGraphic"/></filter></defs><text filter="url(#tagFilter)" x="${nameLength + (ccfLevel < 3 ? 10 : 28)}" y="-1" fill="white" font-weight="bold" textLength="${tagLength}" font-size="12">${tag}</text>`:``;
 
     return `
-    <g transform="translate(0, 0)" font-family="Code, Verdana, Microsoft Yahei" text-rendering="geometricPrecision">
+    <g transform="translate(0, 0)" font-family="Verdana, Microsoft Yahei" text-rendering="geometricPrecision">
         <text x="0" y="0" fill="${nameColor}" font-weight="bold" textLength="${nameLength}" font-size="18">
             ${name}
         </text>
