@@ -67,7 +67,7 @@
 
 注意，若程序检测到咕值排名在1000名以内，则程序会自动从“咕值排名”中获取咕值。若获取成功，程序将无视用户输入。不过此功能偶尔会出BUG，所以最好还是手动设置一下咕值吧。
 
-排名靠前的[Alex_Wei](https://www.luogu.com.cn/user/123294)的咕值如下
+排名靠前的[Alex_Wei](https://www.luogu.com.cn/user/123294)dalao的咕值如下
 
 ![Alex_Wei 的咕值信息](https://luogu-card.vercel.app/guzhi?id=123294)
 
