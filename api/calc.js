@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
 	
 	res.setHeader("Content-Type", "image/svg+xml");
 	
-	const validask = /^[1-9]\d*(_[0-7])?([+- ][1-9]\d*(_[0-7])?)*$/;
+	const validask = /^[1-9]\d*(_[0-7])?([-+ ][1-9]\d*(_[0-7])?)*$/;
 	
 	if(!validask.test(ask)) {
 		return res.send(renderError(`"${ask}"不是一个合法式子`));
