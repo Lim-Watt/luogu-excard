@@ -79,10 +79,10 @@
 
 引用通过题目的数量进行加减，返回一个数字。这个东西用法宽泛。比如
 
-> 距离做题数严格单调递增，仅差![220](https://luogu-excard.vercel.app/calc?ask=883464_6-883464_7%2B1&co_fr=e74c3c)道黑题
+> 距离做题数严格单调递增，仅差![220](https://luogu-excard.vercel.app/calc?ask=883464_6-883464_7+1&co_fr=e74c3c)道黑题
 
 ```markdown
-距离做题数严格单调递增，仅差![220](https://luogu-excard.vercel.app/calc?ask=883464_6-883464_7%2B1&co_fr=e74c3c)道黑题
+距离做题数严格单调递增，仅差![220](https://luogu-excard.vercel.app/calc?ask=883464_6-883464_7+1&co_fr=e74c3c)道黑题
 ```
 
 关于问号后的参数。
